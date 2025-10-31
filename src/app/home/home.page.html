@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true">
   <ion-list [inset]="true">
-    <ion-item *ngFor="let task of tasksn ">
+    <ion-item *ngFor="let task of tasks ">
       <ion-label>
         <h2 [class.complited]="task.complited">{{task.title}}</h2>
         <p>{{task.description}}</p>
@@ -16,6 +16,11 @@
       <ion-checkbox slot="end" [checked]="task.complited" (ionChange)="toggleTask(task)"></ion-checkbox>
       <ion-button fill="clear" color="danger" (click)="deleteTask(task.id)">
         <ion-icon name="trash">
+        </ion-icon>
+        
+      </ion-button>
+      <ion-button fill="clear" color="success" (click)="updateTask(task)">
+        <ion-icon name="pencil-outline">
 
         </ion-icon>
       </ion-button>

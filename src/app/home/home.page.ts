@@ -37,4 +37,9 @@ export class HomePage {
     await this.taskService.updateTask(task)
     this.loadTasks(); 
   }
+
+  async updateTask(updatedTask: Task) {
+    await this.taskService.updateTask(updatedTask);
+    this.loadTasks()
+  }
 }
